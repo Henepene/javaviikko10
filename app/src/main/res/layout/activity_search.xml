@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CarInfoText"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+    <EditText
+        android:id="@+id/CityNameEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Kaupungin nimi"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/YearEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint=" Vuosi"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/CityNameEdit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/CityNameEdit"
+        app:layout_constraintTop_toBottomOf="@+id/CityNameEdit" />
+
+    <Button
+        android:id="@+id/SearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="onFindBtnClick"
+        android:text="Hae tiedot"
+        app:layout_constraintEnd_toEndOf="@+id/YearEdit"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/YearEdit"
+        app:layout_constraintTop_toBottomOf="@+id/YearEdit" />
+
+    <Button
+        android:id="@+id/ListInfoActivityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Siirry tietoihin"
+        app:layout_constraintEnd_toEndOf="@+id/SearchButton"
+        app:layout_constraintStart_toStartOf="@+id/SearchButton"
+        app:layout_constraintTop_toBottomOf="@+id/SearchButton" />
+
+    <Button
+        android:id="@+id/StatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Palaa päävalikkoon"
+        app:layout_constraintEnd_toEndOf="@+id/ListInfoActivityButton"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="@+id/ListInfoActivityButton"
+        app:layout_constraintTop_toBottomOf="@+id/ListInfoActivityButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,5 @@
 package com.example.javaviikko10;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -9,13 +8,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class ListInfoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_list_info);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.CarInfoText), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -23,12 +22,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void switchSearchActivity(android.view.View view) {
-        Intent intent = new Intent(this, SearchActivity.class);
-        startActivity(intent);
-    }
-    public void switchToListInfoAcitivty(android.view.View view) {
-        Intent intent = new Intent(this, ListInfoActivity.class);
-        startActivity(intent);
-    }
 }
